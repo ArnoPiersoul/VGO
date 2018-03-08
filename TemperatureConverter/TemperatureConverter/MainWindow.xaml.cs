@@ -32,7 +32,13 @@ namespace TemperatureConverter
 
         private void ConvertToCelsius(object sender, RoutedEventArgs e)
         {
-            textBox.Text = "You clicked the button";
+            var val = double.Parse(textBox.Text);
+            textBox.Text = Convert.ToString((val - 32) * 5 / 9);
+        }
+        private void ConvertToFarenheit(object sender, RoutedEventArgs e)
+        {
+            var val = double.Parse(textBox.Text);
+            textBox.Text = Convert.ToString(val / 5 * 9 + 32);
         }
     }
 }
