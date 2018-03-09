@@ -21,13 +21,17 @@
             <Setter Property="FontSize" Value="16" />
             <Setter Property="Padding" Value="2" />
         </Style>
+        <Style x:Key="buttonStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
     </Window.Resources>
     <StackPanel>
         <TextBlock Text="Celsius" Style="{StaticResource labelStyle}"/>
-        <TextBox x:Name="Celsius" FontSize="16" TextAlignment="Center"/>
+        <TextBox x:Name="Celsius" Style="{StaticResource buttonStyle}"/>
         <Button Content="Convert to Celsius" Click="ConvertToCelsius"/>
         <TextBlock Text="Farenheit" Style="{StaticResource labelStyle}"/>
-        <TextBox x:Name="Farenheit" FontSize="16" TextAlignment="Center"/>
+        <TextBox x:Name="Farenheit" Style="{StaticResource buttonStyle}"/>
         <Button Content="Convert to Farenheit" Click="ConvertToFarenheit"/>
     </StackPanel>
 </Window>
