@@ -30,15 +30,23 @@ namespace TemperatureConverter
 
         }
 
-        private void ConvertToCelsius(object sender, RoutedEventArgs e)
+        private void ConvertFromFarenheit(object sender, RoutedEventArgs e)
         {
             var val = double.Parse(Farenheit.Text);
             celsiusTextbox.Text = Convert.ToString((val - 32) * 5 / 9);
+            Kelvin.Text = Convert.ToString((val + 459.67) * 5 / 9);
         }
-        private void ConvertToFarenheit(object sender, RoutedEventArgs e)
+        private void ConvertFromCelsius(object sender, RoutedEventArgs e)
         {
             var val = double.Parse(celsiusTextbox.Text);
             Farenheit.Text = Convert.ToString(val / 5 * 9 + 32);
+            Kelvin.Text = Convert.ToString(val + 273.15);
+        }
+        private void ConvertFromKelvin(object sender, RoutedEventArgs e)
+        {
+            var val = double.Parse(Kelvin.Text);
+            Farenheit.Text = Convert.ToString(val * 9 / 5 - 459.67);
+            celsiusTextbox.Text = Convert.ToString(val - 273.15);
         }
     }
 }
