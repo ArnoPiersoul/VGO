@@ -33,11 +33,11 @@ namespace TemperatureConverter
         private void ConvertToCelsius(object sender, RoutedEventArgs e)
         {
             var val = double.Parse(Farenheit.Text);
-            Celsius.Text = Convert.ToString((val - 32) * 5 / 9);
+            celsiusTextbox.Text = Convert.ToString((val - 32) * 5 / 9);
         }
         private void ConvertToFarenheit(object sender, RoutedEventArgs e)
         {
-            var val = double.Parse(Celsius.Text);
+            var val = double.Parse(celsiusTextbox.Text);
             Farenheit.Text = Convert.ToString(val / 5 * 9 + 32);
         }
     }
