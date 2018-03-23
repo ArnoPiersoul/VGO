@@ -38,7 +38,6 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Celsius" Style="{StaticResource labelStyle}" />
             <TextBox Grid.Row="1" x:Name="celsiusTextbox" Style="{StaticResource textBoxStyle}" />
-            <Click="ConvertFromCelsius" />
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -51,7 +50,6 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Farenheit" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" x:Name="Farenheit" Style="{StaticResource textBoxStyle}"/>
-            <Click="ConvertFromFarenheit"/>
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -64,7 +62,7 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Kelvin" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" x:Name="Kelvin" Style="{StaticResource textBoxStyle}"/>
-            <Click="ConvertFromKelvin"/>
         </Grid>
+        <Slider x:Name="Slider" Minimum="0" Maximum="1000" ValueChanged="SliderValueChanged"/>
     </StackPanel>
 </Window>
