@@ -51,7 +51,6 @@ namespace TemperatureConverter
 
         private void SliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Kelvin.Text = Convert.ToString(Slider.Value);
             Farenheit.Text = Convert.ToString(Slider.Value * 9 / 5 - 459.67);
             celsiusTextbox.Text = Convert.ToString(Slider.Value - 273.15);
         }
